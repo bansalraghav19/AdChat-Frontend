@@ -1,6 +1,7 @@
 .messageBox {
   flex: 0 90%;
   overflow: scroll;
+  margin-top: 65px;
 }
 
 .containerForm {

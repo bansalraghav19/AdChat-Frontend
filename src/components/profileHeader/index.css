@@ -50,6 +50,10 @@
 
 .headerContainerBox {
   display: flex;
+  position: fixed;
+  width: 100%;
+  background: white;
+  z-index: 1000000;
   box-shadow: 0 7px 6px -6px black;
 }
 
