@@ -106,16 +106,13 @@ const DashBoard = ({ getUserData, isLoading, getUserFriends, friendsData }) => {
             />
           </div>
           {skeltonLoading && (
-            <div style={{ position: "relative", top: "65px" }}>
+            <div>
               <Skelton />
             </div>
           )}
           <div
             style={{
               visibility: skeltonLoading ? "hidden" : "visible",
-              position: "relative",
-              top: "65px",
-              overflow: 'auto'
             }}
           >
             {friendsData?.data?.friendsList?.map((item, index) => (

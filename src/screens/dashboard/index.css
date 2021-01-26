@@ -25,6 +25,7 @@
   height: 100%;
   background: white;
   position: relative;
+  overflow: auto;
 }
 
 .sticky {
