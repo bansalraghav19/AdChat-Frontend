@@ -12,7 +12,7 @@ import SocketContext from "../../contexts/SocketContext";
 import { getUserFriends } from "./action";
 import Skelton from "../../components/Skeltons/userCard";
 
-const io = socket.connect(`https://advchatapp.herokuapp.com`);
+const io = socket.connect(`https://advchatapp.herokuapp.com/`);
 
 const openNotification = (message) => {
   notification.info({
@@ -42,6 +42,8 @@ const DashBoard = ({ getUserData, isLoading, getUserFriends, friendsData }) => {
     message.success(`Welcome Back, ${getUserData?.data?.data?.name}`, 3);
     io.on("refershFriends", async () => {
       await getUserFriends();
+      const { email, _id, name } = getUserData?.data?.data;
+      io.emit("join", { email, _id, name });
     });
     return () =>
       io.off("refershFriends", async () => {
