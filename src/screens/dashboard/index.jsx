@@ -12,7 +12,7 @@ import SocketContext from "../../contexts/SocketContext";
 import { getUserFriends } from "./action";
 import Skelton from "../../components/Skeltons/userCard";
 
-const io = socket.connect(`https://advchatapp.herokuapp.com/`);
+const io = socket(`https://advchatapp.herokuapp.com/`);
 
 const openNotification = (message) => {
   notification.info({
