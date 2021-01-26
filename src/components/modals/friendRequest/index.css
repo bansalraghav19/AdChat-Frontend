@@ -1,0 +1,24 @@
+.formPosition {
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+
+.login-form-add .ant-input-affix-wrapper {
+  border: none !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.login-form-add .ant-form-item-control-input-content .ant-input:nth-child(1) {
+  border: none !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.login-form-add {
+  margin-top: 50px !important;
+  padding: 0 5% !important;
+}

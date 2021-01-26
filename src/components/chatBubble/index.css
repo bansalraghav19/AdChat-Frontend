@@ -1,0 +1,65 @@
+.bubble {
+  background: #00bfff;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  color: white;
+  margin: 10px 0;
+  display: flex;
+  max-width: 350px;
+  font-size: 18px;
+  border-top-left-radius: 0;
+  word-break: break-word;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.bubble::before {
+  content: "";
+  position: absolute;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #00bfff;
+  transform: rotate(45deg);
+  top: -8px;
+  left: -8px;
+}
+
+.sender {
+  align-self: flex-end;
+  background: #008b8b;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  color: white;
+  margin: 10px 0;
+  display: flex;
+  font-size: 18px;
+  max-width: 350px;
+  word-break: break-word;
+  border-top-right-radius: 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.sender::after {
+  content: "";
+  position: absolute;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #008b8b;
+  transform: rotate(315deg);
+  top: -8px;
+  right: -8px;
+}
+
+.messageTime {
+  color: white;
+  font-size: 10px;
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 40px;
+}
+
+.messageText {
+  color: white;
+  padding-right: 10px;
+}

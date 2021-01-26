@@ -1,0 +1,60 @@
+.containerBox {
+  display: flex;
+  padding: 5px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100000;
+}
+
+.containerBox:after {
+  content: "\A";
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  filter: grayscale(2px);
+  z-index: 1;
+  opacity: 0;
+  transition: all 3s;
+}
+
+.containerBox:active:after {
+  opacity: 1;
+  width: 100%;
+}
+
+.userDetails {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.skeltonProfile {
+  position: absolute;
+  width: 100%;
+}
+
+.imgHead {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position: 200%;
+}
+
+.headerContainerBox {
+  display: flex;
+  box-shadow: 0 7px 6px -6px black;
+}
+
+@media only screen and (max-width: 767px) {
+  .containerBox {
+    padding: 5px 0px;
+  }
+}

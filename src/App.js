@@ -1,25 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { Switch } from "react-router-dom";
+import { connect } from "react-redux";
+import { getUserDetails } from "./lib/auth/action";
+import DashBoard from "./screens/dashboard/index";
+import Login from "./screens/authorization/login/index";
+import Register from "./screens/authorization/register/index";
+import ErrorPage from "./screens/errorPage/index";
+import ResetPassword from "./screens/authorization/resetPassword/index";
+import PrivateRoute from "./components/routes/PrivateRoute/index";
+import PublicRoute from "./components/routes/PublicRoute/index";
+import { logoutUser } from "./screens/authorization/action";
+import PropTypes from "prop-types";
+import "./App.css";
 
-function App() {
+const App = ({ getUserDetails, isLogged }) => {
+  useEffect(() => {
+    const getData = async () => {
+      await getUserDetails();
+    };
+    getData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Switch>
+      <PrivateRoute
+        isLogged={isLogged}
+        restricted
+        path="/login"
+        component={Login}
+        exact
+      />
+      <PrivateRoute
+        isLogged={isLogged}
+        restricted
+        path="/register"
+        component={Register}
+        exact
+      />
+      <PrivateRoute
+        isLogged={isLogged}
+        restricted
+        path="/resetpassword"
+        component={ResetPassword}
+        exact
+      />
+      <PublicRoute
+        component={DashBoard}
+        isLogged={isLogged}
+        restricted
+        path="/"
+        exact
+      />
+      <PrivateRoute component={ErrorPage} />
+    </Switch>
   );
-}
+};
 
-export default App;
+const mapStateToProps = (state) => ({
+  isLogged: state.isLogged.isLogged,
+});
+
+export default connect(mapStateToProps, { getUserDetails, logoutUser })(App);

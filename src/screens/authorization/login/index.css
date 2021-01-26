@@ -1,0 +1,12 @@
+.ant-col-rtl .login-form-forgot {
+  float: left;
+}
+.login-form-button {
+  width: 100%;
+}
+.login-form-login {
+  width: 300px !important;
+}
+.login-form-login-forgot {
+  float: right;
+}

@@ -1,0 +1,9 @@
+.changePassword .ant-drawer-body {
+  display: flex !important;
+  align-items: center;
+}
+
+.changePassword .formC {
+  position: relative;
+  width: 100%;
+}

@@ -1,38 +1,80 @@
-.App {
-  text-align: center;
+body {
+  background: white;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  background: white;
+}
+
+.formContainer {
+  background: white;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.registerModal .ant-modal-close-x {
+  display: none !important;
+}
+
+.registerModal .ant-modal-body {
+  display: flex !important;
+}
+
+.btn span {
+  font-weight: 600;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.ant-drawer-body::-webkit-scrollbar {
+  display: none !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Hide scrollbar for IE, Edge and Firefox */
+.ant-drawer-body {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
 }
+
+.ant-drawer-content {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+.ant-drawer-content::-webkit-scrollbar {
+  display: none !important;
+}
+
+.ant-drawer-header {
+  position: sticky !important;
+  top: 0 !important;
+}
+
+.ant-drawer-wrapper-body {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+.ant-drawer-wrapper-body::-webkit-scrollbar {
+  display: none !important;
+}
+
+.addfriend .ant-modal-content {
+  max-width: 400px !important;
+}
+
+.centerForm {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: 100vh;
+}
+

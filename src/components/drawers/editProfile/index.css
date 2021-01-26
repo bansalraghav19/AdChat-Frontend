@@ -1,0 +1,107 @@
+.profileDrawer .ant-image-img {
+  border-radius: 50% !important;
+  width: 200px;
+  height: 200px;
+}
+
+.profileDrawer .ant-image-mask {
+  border-radius: 50% !important;
+  width: 200px;
+  height: 200px;
+}
+
+.profileDrawer {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileDrawer .switch {
+  margin-left: auto;
+  margin-bottom: 7%;
+}
+
+.profileDrawer .userdetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.profileDrawer .userdetails span {
+  margin-top: 3%;
+  font-weight: bold;
+  font-style: italic;
+  font-size: medium;
+}
+
+.profileDrawer .editable .ant-input {
+  border: none !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+  box-shadow: none !important;
+  margin-top: 3%;
+}
+
+.profileDrawer .editable .ant-input:first-child {
+  margin-top: 6%;
+}
+
+.profileDrawer .editable .ant-input:focus {
+  border-bottom: 1px solid rgb(0, 191, 255) !important;
+}
+
+.profileDrawer .editable .error {
+  font-size: 12px;
+  color: red;
+  display: inline-block;
+}
+
+.profileDrawer .editable .username {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-style: italic;
+  display: inline-block;
+  margin-top: 6%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.profileDrawer .editable blockquote {
+  margin-top: 15px;
+  font-family: cursive;
+  font-style: oblique;
+  text-align: center;
+  padding: 0 10%;
+}
+
+.profileDrawer .upload {
+  display: flex;
+  justify-content: center;
+  margin-top: 3%;
+}
+
+.profileDrawer .upload span[class=""] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.profileDrawer .upload .ant-upload-list {
+  position: relative;
+  width: 100%;
+}
+
+.profileDrawer .btncnter {
+  display: flex;
+  justify-content: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-color: lightblue;
+  }
+}

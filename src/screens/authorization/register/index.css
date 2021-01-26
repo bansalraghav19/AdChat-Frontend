@@ -1,0 +1,26 @@
+.recaptcha_field {
+  position: relative;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hidden {
+  opacity: 0 !important;
+}
+
+.notHidden {
+  opacity: 1 !important;
+}
+
+.centerAlign {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #ffffff;
+}
