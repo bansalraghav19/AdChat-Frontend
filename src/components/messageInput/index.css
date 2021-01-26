@@ -1,13 +1,13 @@
 .messageBox {
   position: relative;
-  max-height: calc(100% - 72px - 65px);
+ // max-height: calc(100% - 72px - 65px);
   overflow: auto;
 }
 
 .containerForm {
   display: flex;
   padding: 20px;
-  position: sticky;
+  position: fixed;
   bottom: 0;
   width: 70%;
   background: white;
