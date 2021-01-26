@@ -4,6 +4,8 @@
   box-shadow: 0 7px 6px -6px black;
   position: sticky;
   top: 0;
+  height: 65px;
+  backface-visibility: hidden;
   z-index: 1000;
 }
 
