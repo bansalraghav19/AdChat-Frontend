@@ -1,11 +1,12 @@
 .messageBox {
-  flex-grow: 1;
+  flex: 0 90%;
   overflow: scroll;
 }
 
 .containerForm {
   display: flex;
   padding: 20px;
+  flex: 1;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
