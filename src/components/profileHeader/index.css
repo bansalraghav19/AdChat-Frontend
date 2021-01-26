@@ -62,6 +62,17 @@
   animation-timing-function: linear;
 }
 
+@keyframes animate {
+  from {
+    top: -10px;
+  }
+
+  to {
+    top: 0px;
+  }
+}
+
+
 @media only screen and (max-width: 767px) {
   .containerBox {
     padding: 5px 0px;
