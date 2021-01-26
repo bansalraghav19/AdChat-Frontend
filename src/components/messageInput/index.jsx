@@ -63,7 +63,7 @@ const MessageInput = ({ roomData, curUserEmail, isLoading }) => {
         });
       }
     };
-  }, [typeof scrollBottomRef.current !== "undefined"]);
+  }, [scrollBottomRef]);
 
   useEffect(() => {
     setMessage(roomData?.data?.messages);

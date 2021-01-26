@@ -106,11 +106,17 @@ const DashBoard = ({ getUserData, isLoading, getUserFriends, friendsData }) => {
             />
           </div>
           {skeltonLoading && (
-            <div>
+            <div style={{ position: "relative", top: "65px" }}>
               <Skelton />
             </div>
           )}
-          <div style={{ visibility: skeltonLoading ? "hidden" : "visible" }}>
+          <div
+            style={{
+              visibility: skeltonLoading ? "hidden" : "visible",
+              position: "relative",
+              top: "65px",
+            }}
+          >
             {friendsData?.data?.friendsList?.map((item, index) => (
               <Card
                 setCurChat={setCurChat}

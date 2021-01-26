@@ -1,8 +1,8 @@
 .messageBox {
-  flex: 1;
+  position: relative;
+  top: 65px;
+  height: calc(100% - 72px - 65px);
   overflow: scroll;
-  margin-top: 65px;
-  padding-bottom: 72px;
 }
 
 .containerForm {
@@ -13,7 +13,6 @@
   width: 70%;
   background: white;
   z-index: 100000;
-  flex: 1;
   height: 72px;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }

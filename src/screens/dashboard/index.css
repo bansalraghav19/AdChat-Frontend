@@ -29,10 +29,11 @@
 }
 
 .sticky {
-  position: sticky;
+  position: fixed;
   top: 0;
-  z-index: 10;
+  z-index: 10000;
   background: white;
+  width: 30%;
   /* box-shadow: 0 0 0 0 black; */
 }
 
@@ -61,5 +62,8 @@
   }
   .other {
     flex: 1;
+  }
+  .sticky {
+    width: 100%;
   }
 }
