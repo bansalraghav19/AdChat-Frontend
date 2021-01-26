@@ -12,7 +12,7 @@ import SocketContext from "../../contexts/SocketContext";
 import { getUserFriends } from "./action";
 import Skelton from "../../components/Skeltons/userCard";
 
-const io = socket.connect(`${process.env.REACT_APP_URL}`);
+const io = socket.connect(`https://advchatapp.herokuapp.com/`);
 
 const openNotification = (message) => {
   notification.info({
@@ -21,7 +21,7 @@ const openNotification = (message) => {
   });
 };
 
-const DashBoard = ({ getUserData, isLoading, getUserFriends, friendsData, history }) => {
+const DashBoard = ({ getUserData, isLoading, getUserFriends, friendsData }) => {
   const [curChat, setCurChat] = useState(-1);
   const [skeltonLoading, setSkeltonLoading] = useState(true);
   const [imageCounter, setImageCounter] = useState(0);

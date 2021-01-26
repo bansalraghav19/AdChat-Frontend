@@ -7,7 +7,7 @@ export const getUserDetails = () => (dispatch) => {
   dispatch(actionHandlers.loadingStart());
   dispatch(actionHandlers.tryHandle(actionTypes.GET_USER_DETAILS));
   return axios
-    .get(`${process.env.REACT_APP_URL}/user`, options())
+    .get(`https://advchatapp.herokuapp.com/user`, options())
     .then((response) => {
       if (response.data) {
         dispatch(

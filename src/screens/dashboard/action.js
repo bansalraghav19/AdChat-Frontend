@@ -7,7 +7,7 @@ export const getUserFriends = () => (dispatch) => {
   dispatch(actionHandlers.skeltonLoadingStart());
   dispatch(actionHandlers.tryHandle(actionTypes.GET_FREINDS));
   return axios
-    .get(`${process.env.REACT_APP_URL}/getfriends`, options())
+    .get(`https://advchatapp.herokuapp.com/getfriends`, options())
     .then((response) => {
       if (response.data) {
         dispatch(
@@ -28,7 +28,7 @@ export const getUserFriends = () => (dispatch) => {
 export const getFriendData = (id) => (dispatch) => {
   dispatch(actionHandlers.tryHandle(actionTypes.GET_FRIEND_DATA));
   return axios
-    .get(`${process.env.REACT_APP_URL}/friend/${id}`, options())
+    .get(`https://advchatapp.herokuapp.com/friend/${id}`, options())
     .then((response) => {
       if (response.data) {
         dispatch(
@@ -49,7 +49,7 @@ export const getFriendData = (id) => (dispatch) => {
 export const roomChatData = (roomId) => (dispatch) => {
   dispatch(actionHandlers.skeltonLoadingStart());
   return axios
-    .get(`${process.env.REACT_APP_URL}/roominfo/${roomId}`, options())
+    .get(`https://advchatapp.herokuapp.com/roominfo/${roomId}`, options())
     .then((response) => {
       if (response.data) {
         dispatch(
@@ -72,7 +72,7 @@ export const roomChatData = (roomId) => (dispatch) => {
 export const changePassword = (payload) => (dispatch) => {
   dispatch(actionHandlers.tryHandle(actionTypes.CHANGE_PASSWORD));
   return axios
-    .put(`${process.env.REACT_APP_URL}/changepassword`, payload, options())
+    .put(`https://advchatapp.herokuapp.com/changepassword`, payload, options())
     .then((response) => {
       if (response.data) {
         dispatch(

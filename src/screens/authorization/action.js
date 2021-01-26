@@ -8,7 +8,7 @@ export const loginUser = (payload) => (dispatch) => {
   dispatch(actionHandlers.loadingStart());
   dispatch(actionHandlers.tryHandle(actionTypes.LOGIN_USER));
   return axios
-    .post(`${process.env.REACT_APP_URL}/login`, payload)
+    .post(`https://advchatapp.herokuapp.com/login`, payload)
     .then((response) => {
       if (response.data) {
         dispatch(
@@ -33,7 +33,7 @@ export const logoutUser = () => (dispatch) => {
   dispatch(actionHandlers.loadingStart());
   dispatch(actionHandlers.tryHandle(actionTypes.LOGOUT_USER));
   return axios
-    .get(`${process.env.REACT_APP_URL}/logout`, options())
+    .get(`https://advchatapp.herokuapp.com/logout`, options())
     .then((response) => {
       if (response.data) {
         dispatch(
@@ -62,7 +62,7 @@ export const registerUser = (payload) => (dispatch) => {
   dispatch(actionHandlers.loadingStart());
   dispatch(actionHandlers.tryHandle(actionTypes.REGISTER_USER));
   return axios
-    .post(`${process.env.REACT_APP_URL}/register`, payload)
+    .post(`https://advchatapp.herokuapp.com/register`, payload)
     .then((response) => {
       if (response.data) {
         dispatch(
@@ -86,7 +86,7 @@ export const registerUser = (payload) => (dispatch) => {
 export const checkAvailable = (payload) => (dispatch) => {
   dispatch(actionHandlers.tryHandle(actionTypes.CHECK_EMAIL));
   return axios
-    .post(`${process.env.REACT_APP_URL}/checkUser`, payload)
+    .post(`https://advchatapp.herokuapp.com/checkUser`, payload)
     .then((response) => {
       if (response.data) {
         dispatch(
@@ -107,7 +107,7 @@ export const checkAvailable = (payload) => (dispatch) => {
 export const sendEmailOtp = (payload) => (dispatch) => {
   dispatch(actionHandlers.tryHandle(actionTypes.SEND_EMAIL_OTP));
   return axios
-    .post(`${process.env.REACT_APP_URL}/verifyotp`, payload)
+    .post(`https://advchatapp.herokuapp.com/verifyotp`, payload)
     .then((response) => {
       if (response.data) {
         dispatch(
@@ -128,7 +128,7 @@ export const sendEmailOtp = (payload) => (dispatch) => {
 export const editUser = (payload, callback) => (dispatch) => {
   dispatch(actionHandlers.tryHandle(actionTypes.EDIT_USER));
   return axios
-    .put(`${process.env.REACT_APP_URL}/edituser`, payload, options())
+    .put(`https://advchatapp.herokuapp.com/edituser`, payload, options())
     .then((response) => {
       if (response.data) {
         dispatch(
@@ -154,7 +154,7 @@ export const editUser = (payload, callback) => (dispatch) => {
 export const resetPassword = (payload, callback) => (dispatch) => {
   dispatch(actionHandlers.tryHandle(actionTypes.RESET_PASSWORD));
   return axios
-    .post(`${process.env.REACT_APP_URL}/resetpassword`, payload, options())
+    .post(`https://advchatapp.herokuapp.com/resetpassword`, payload, options())
     .then((response) => {
       if (response.data) {
         dispatch(
