@@ -57,6 +57,9 @@
   z-index: 1000000;
   backface-visibility: hidden;
   box-shadow: 0 7px 6px -6px black;
+  animation-name: animate;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
 }
 
 @media only screen and (max-width: 767px) {
