@@ -1,7 +1,8 @@
 .messageBox {
-  flex: 0 90%;
+  flex: 1;
   overflow: scroll;
   padding-top: 65px;
+  padding-bottom: 72px;
 }
 
 .containerForm {
@@ -9,8 +10,11 @@
   padding: 20px;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 70%;
+  background: white;
+  z-index: 100000;
   flex: 1;
+  height: 72px;
   box-shadow: 0 0 11px rgba(33, 33, 33, 0.2);
 }
 
@@ -43,3 +47,10 @@
 .moveDown:hover {
   opacity: 1;
 }
+
+@media only screen and (max-width: 767px) {
+  .containerForm {
+    width: 100%;
+  }
+}
+

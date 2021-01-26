@@ -1,5 +1,6 @@
 import axios from "axios";
 import * as actionTypes from "./actionTypes";
+import * as dashBoardActionTypes from "../dashboard/actionTypes";
 import * as authActionTypes from "../../lib/auth/actionTypes";
 import * as actionHandlers from "../../lib/helpers/actionHandlers";
 import options from "../../lib/utils/headers";
@@ -47,6 +48,8 @@ export const logoutUser = () => (dispatch) => {
         );
         dispatch(actionHandlers.isNotLogged());
         dispatch(actionHandlers.loadingStop());
+        dispatch(dashBoardActionTypes.GET_FREINDS, [])
+        dispatch(actionHandlers)
       }
     })
     .catch((error) => {
