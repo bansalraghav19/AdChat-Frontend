@@ -1,7 +1,7 @@
 .messageBox {
   flex: 1;
   overflow: scroll;
-  padding-top: 65px;
+  margin-top: 65px;
   padding-bottom: 72px;
 }
 
