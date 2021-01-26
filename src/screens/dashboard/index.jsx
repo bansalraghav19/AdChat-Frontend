@@ -115,6 +115,7 @@ const DashBoard = ({ getUserData, isLoading, getUserFriends, friendsData }) => {
               visibility: skeltonLoading ? "hidden" : "visible",
               position: "relative",
               top: "65px",
+              overflow: 'auto'
             }}
           >
             {friendsData?.data?.friendsList?.map((item, index) => (
