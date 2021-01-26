@@ -8,8 +8,6 @@
     "@testing-library/user-event": "^12.1.10",
     "antd": "^4.10.0",
     "axios": "^0.21.1",
-    "dotenv": "^8.2.0",
-    "dotenv-load": "^2.0.0",
     "firebase": "^8.2.3",
     "moment": "^2.29.1",
     "prop-types": "^15.7.2",
@@ -29,9 +27,6 @@
     "web-vitals": "^0.2.4"
   },
   "scripts": {
-    "lint": "eslint ./src --ext js,jsx",
-    "lintfix": "eslint ./src --ext js,jsx --fix",
-    "dev": "dotenv-load react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
