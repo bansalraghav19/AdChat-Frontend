@@ -1,6 +1,5 @@
 .messageBox {
   position: relative;
-  top: 65px;
   max-height: calc(100% - 72px - 65px);
   overflow: auto;
 }
