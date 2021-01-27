@@ -50,5 +50,9 @@
   .containerForm {
     width: 100%;
   }
-}
 
+  .messageBox {
+    position: fixed;
+    width: 100%;
+  }
+}
