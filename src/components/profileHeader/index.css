@@ -77,4 +77,7 @@
   .containerBox {
     padding: 5px 0px;
   }
+  .headerContainerBox {
+    position: fixed;
+  }
 }
