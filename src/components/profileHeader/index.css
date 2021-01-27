@@ -57,7 +57,21 @@
   z-index: 1000000;
   backface-visibility: hidden;
   box-shadow: 0 7px 6px -6px black;
+  animation-name: animate;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
 }
+
+@keyframes animate {
+  from {
+    top: -10px;
+  }
+
+  to {
+    top: 0px;
+  }
+}
+
 
 @media only screen and (max-width: 767px) {
   .containerBox {
