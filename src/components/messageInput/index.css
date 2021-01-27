@@ -54,5 +54,6 @@
   .messageBox {
     position: fixed;
     width: 100%;
+    top: 65px;
   }
 }
