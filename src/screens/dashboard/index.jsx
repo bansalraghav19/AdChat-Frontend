@@ -114,6 +114,7 @@ const DashBoard = ({ getUserData, isLoading, getUserFriends, friendsData }) => {
             style={{
               visibility: skeltonLoading ? "hidden" : "visible",
             }}
+            className="overflowContainer"
           >
             {friendsData?.data?.friendsList?.map((item, index) => (
               <Card
