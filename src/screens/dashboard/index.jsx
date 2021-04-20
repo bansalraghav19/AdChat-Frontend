@@ -106,7 +106,7 @@ const DashBoard = ({ getUserData, isLoading, getUserFriends, friendsData }) => {
             />
           </div>
           {skeltonLoading && (
-            <div>
+            <div className="overflowContainer">
               <Skelton />
             </div>
           )}
