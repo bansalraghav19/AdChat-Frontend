@@ -31,13 +31,13 @@ const MessageInput = ({ roomData, curUserEmail, isLoading, roomId }) => {
 
   useEffect(() => {
     io.on("revieveMessage", (message) => {
-      if (roomData?.data?.roomId === roomId) {
+      if (message?.roomId === roomId) {
         setMessage((prevState) => [...prevState, message]);
       }
     });
     return () =>
       io.off("revieveMessage", (message) => {
-        if (roomData?.data?.roomId === roomId) {
+        if (message?.roomId === roomId) {
           setMessage((prevState) => [...prevState, message]);
         }
       });
@@ -45,10 +45,10 @@ const MessageInput = ({ roomData, curUserEmail, isLoading, roomId }) => {
 
   useEffect(() => {
     const event = () => {
-      const heightScrollBox = scrollBoxRef.current.offsetHeight;
-      const containerHeight = scrollBottomRef.current.offsetHeight;
+      const heightScrollBox = scrollBoxRef?.current?.offsetHeight;
+      const containerHeight = scrollBottomRef?.current?.offsetHeight;
       if (
-        scrollBottomRef.current.scrollTop <
+        scrollBottomRef?.current?.scrollTop <
         heightScrollBox - 2 * containerHeight
       ) {
         setShowDown(true);
@@ -57,13 +57,13 @@ const MessageInput = ({ roomData, curUserEmail, isLoading, roomId }) => {
       }
     };
     if (scrollBottomRef.current) {
-      scrollBottomRef.current.addEventListener("scroll", event, {
+      scrollBottomRef?.current?.addEventListener("scroll", event, {
         passive: true,
       });
     }
     return () => {
-      if (scrollBottomRef.current) {
-        scrollBottomRef.current.removeEventListener("scroll", event, {
+      if (scrollBottomRef?.current) {
+        scrollBottomRef?.current?.removeEventListener("scroll", event, {
           passive: true,
         });
       }
