@@ -14,7 +14,7 @@ import { Input, Button } from "antd";
 import Skelton from "../Skeltons/chatRoom";
 import SocketContext from "../../contexts/SocketContext";
 
-const MessageInput = ({ roomData, curUserEmail, isLoading }) => {
+const MessageInput = ({ roomData, curUserEmail, isLoading, roomId }) => {
   const io = useContext(SocketContext);
   const [message, setMessage] = useState([]);
   const [showDown, setShowDown] = useState(false);
@@ -31,11 +31,16 @@ const MessageInput = ({ roomData, curUserEmail, isLoading }) => {
 
   useEffect(() => {
     io.on("revieveMessage", (message) => {
-      setMessage((prevState) => [...prevState, message]);
+      if (roomData?.data?.roomId === roomId) {
+        setMessage((prevState) => [...prevState, message]);
+      }
     });
-    return () => io.off("revieveMessage", (message) => {
-      setMessage((prevState) => [...prevState, message]);
-    });
+    return () =>
+      io.off("revieveMessage", (message) => {
+        if (roomData?.data?.roomId === roomId) {
+          setMessage((prevState) => [...prevState, message]);
+        }
+      });
   }, []);
 
   useEffect(() => {

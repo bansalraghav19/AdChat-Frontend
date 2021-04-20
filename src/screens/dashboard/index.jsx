@@ -142,7 +142,10 @@ const DashBoard = ({ getUserData, isLoading, getUserFriends, friendsData }) => {
           ) : (
             <>
               <UserHeader mWeb={mWeb} setCurChat={setCurChat} />
-              <MessageInput curUserEmail={getUserData?.data?.data?.email} />
+              <MessageInput
+                curUserEmail={getUserData?.data?.data?.email}
+                roomId={curChat}
+              />
             </>
           )}
         </div>
